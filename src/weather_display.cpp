@@ -47,6 +47,8 @@ void WeatherDisplay::begin() {
     pinMode(POWER_PIN, OUTPUT);
     digitalWrite(POWER_PIN, HIGH);  // Power on the display
     
+    Serial.printf("[WeatherDisplay] tft=%p, sprite=%p, errSprite=%p\n", &tft, &sprite, &errSprite);
+    
     // Additional power management for T-Display S3
     delay(100);  // Allow power to stabilize
     
